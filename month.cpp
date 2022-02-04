@@ -3,8 +3,11 @@
 int main () {
     int year;
     bool leap;
-  std::cout << "Enter the year: ";
+    int month;
+  std::cout << "Enter Year here: ";
   std::cin >> year;
+  std::cout <<"Enter Month here : ";
+  std::cin >> month;
 
   if (year % 4 !=0) {
     leap = false;
@@ -19,33 +22,29 @@ int main () {
     leap = false;
   }
 
-  int month;
-  std::cout <<"Enter Month here : ";
-  std::cin >> month;
-
   if (month == 2) {
     if (leap == true)
     {
-      std::cout << 29 << std::endl;
+      std::cout << "29 days" << std::endl;
     }
     else {
-      std::cout << 28 << std::endl;
+      std::cout << "28 days" << std::endl;
     }
   }
   else if (month < 8) {
     if (month % 2 == 0) {
-      std::cout << 30 << std::endl;
+      std::cout << "30 days" << std::endl;
     }
     else {
-      std::cout << 31 << std::endl;
+      std::cout << "31 days" << std::endl;
     }
   }
   else if (month > 7) {
     if (month % 2 == 0) {
-      std::cout << 31 << std::endl;
+      std::cout << "31 days" << std::endl;
     }
     else {
-      std::cout << 30 << std::endl;
+      std::cout << "30 days" << std::endl;
     }
   }
   return 0;
